@@ -1,5 +1,5 @@
   replicaCount: 1
-  environment: "des"
+  environment: "des1"
   chartName: "app1"
 
   image:
