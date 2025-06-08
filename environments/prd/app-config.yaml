@@ -25,3 +25,5 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
+
+clusterUrl: https://kubernetes.default.svc
