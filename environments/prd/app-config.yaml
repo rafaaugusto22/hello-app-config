@@ -1,6 +1,5 @@
 replicaCount: 1
 environment: "prd"
-chartName: "app1"
 
 image:
   tag: "v1.2.3"  # Tag específica para produção
