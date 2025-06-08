@@ -1,0 +1,27 @@
+replicaCount: 1
+environment: "prd"
+
+image:
+  tag: "v1.2.3"  # Tag específica para produção
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+    
+env:
+  - name: ENVIRONMENT
+    value: "production"
+  - name: LOG_LEVEL
+    value: "info"
+
+ingress:
+  enabled: true
+  hosts:
+    - host: app1.empresa.com
+      paths:
+        - path: /
+          pathType: Prefix
