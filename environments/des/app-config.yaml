@@ -1,22 +1,22 @@
-  replicaCount: 1
-  environment: "des"
-  name: "app1"
+replicaCount: 1
+environment: "des"
+name: "app1"
 
-  image:
-    tag: "latest"
+image:
+tag: "latest"
 
-  resources:
-    limits:
-      cpu: 100m
-      memory: 128Mi
-    requests:
-      cpu: 50m
-      memory: 64Mi
+resources:
+limits:
+  cpu: 100m
+  memory: 128Mi
+requests:
+  cpu: 50m
+  memory: 64Mi
 
-  env:
-    - name: ENVIRONMENT
-      value: "development"
-    - name: LOG_LEVEL
-      value: "debug"
+env:
+- name: ENVIRONMENT
+  value: "development"
+- name: LOG_LEVEL
+  value: "debug"
 
-  clusterUrl: https://kubernetes.default.svc
+clusterUrl: https://kubernetes.default.svc
