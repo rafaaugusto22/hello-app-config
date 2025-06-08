@@ -1,5 +1,6 @@
   replicaCount: 1
   environment: "des"
+  chartName: "app1"
 
   image:
     tag: "latest"
