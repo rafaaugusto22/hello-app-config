@@ -2,12 +2,12 @@ replicaCount: 1
 environment: "des"
 name: "app1"
 
-image:
-tag: "latest"
+image:  
+  tag: "latest"
 
 resources:
 limits:
-  cpu: 50m
+  cpu: 100m
   memory: 128Mi
 requests:
   cpu: 50m
