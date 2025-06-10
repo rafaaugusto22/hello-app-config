@@ -1,6 +1,5 @@
 replicaCount: 1
 environment: "des"
-name: "app1"
 
 replicaCount: 1
 
