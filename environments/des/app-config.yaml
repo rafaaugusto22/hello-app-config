@@ -2,21 +2,32 @@ replicaCount: 1
 environment: "des"
 name: "app1"
 
-image:  
+replicaCount: 1
+
+image:
+  repository: nginxinc/nginx-unprivileged
   tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
 
 resources:
-limits:
-  cpu: 100m
-  memory: 128Mi
-requests:
-  cpu: 50m
-  memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
 
 env:
-- name: ENVIRONMENT
-  value: "development"
-- name: LOG_LEVEL
-  value: "debug"
+  - name: ENVIRONMENT
+    value: "development"
+  - name: LOG_LEVEL
+    value: "debug"
 
 clusterUrl: https://kubernetes.default.svc
